@@ -4,20 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Генератор паролей</title>
 </head>
 <body>
-  <article class="password-generator">
-    <h2 class="password-generator__title">Генератор паролей</h2>
-
-    <div class="password-generator__box">
-      <label><input type="checkbox">Цифры <span class="mark">0-9</span></label>
-      <label><input type="checkbox">Строчные буквы <span class="mark">a-z</span></label>
-      <label><input type="checkbox">Заглавные буквы <span class="mark">A-Z</span></label>
-      <label><input type="checkbox">Спец. символы <span class="mark">! @ # $ % ^ & * ( ) - _ + = ; :   . / ? \ | ` ~ [ ] { }</span></label>
-    </div>
-  </article>
+  <main>
+    <article class="password-generator">
+      <h2 class="password-generator__title">Генератор паролей</h2>
+  
+      <div class="password-generator__box">
+        <div class="password-generator__left">
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__input" type="checkbox" checked>
+            <span class="custom-checkbox__box"></span>
+            <span class="custom-checkbox__label">
+              Цифры
+              <span class="mark">0-9</span>
+            </span>
+          </label>
+  
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__input" type="checkbox" checked>
+            <span class="custom-checkbox__box"></span>
+            <span class="custom-checkbox__label">
+              Строчные буквы
+              <span class="mark">a-z</span>
+            </span>
+          </label>
+  
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__input" type="checkbox" checked>
+            <span class="custom-checkbox__box"></span>
+            <span class="custom-checkbox__label">
+              Заглавные буквы
+              <span class="mark">A-Z</span>
+            </span>
+          </label>
+  
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__input" type="checkbox">
+            <span class="custom-checkbox__box"></span>
+            <span class="custom-checkbox__label">
+              Спец. символы
+              <span class="mark">! @ # $ % ^ & * ( ) - _ + = ; :   . / ? \ | ` ~ [ ] { }</span>
+            </span>
+          </label>
+        
+          <div class="password-generator__left-footer">
+            <button class="password-generator__button-generate button button-primary" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 6V9L16 5L12 1V4C7.58 4 4 7.58 4 12C4 13.57 4.46 15.03 5.24 16.26L6.7 14.8C6.25 13.97 6 13.01 6 12C6 8.69 8.69 6 12 6ZM18.76 7.74L17.3 9.2C17.74 10.04 18 10.99 18 12C18 15.31 15.31 18 12 18V15L8 19L12 23V20C16.42 20 20 16.42 20 12C20 10.43 19.54 8.97 18.76 7.74V7.74Z" fill="white"/>
+              </svg>
+              Сгенерировать
+            </button>
+  
+            <label>Кол-во сиволов<input class="input" type="number" value="8" min="1"></label >
+          </div>
+        </div>
+  
+        <div class="password-generator__right">
+          <ol class="password-generator-list">
+            <li class="password-generator-list__item">
+              123456
+              <button class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM15 5L21 11V21C21 22.1 20.1 23 19 23H7.99C6.89 23 6 22.1 6 21L6.01 7C6.01 5.9 6.9 5 8 5H15ZM14 12H19.5L14 6.5V12Z" fill="#CBD5F6"/>
+                  </svg>
+              </button>
+          </li>
+          </ol>
+        </div>
+      </div>
+    </article>
+  </main>
 
   <!-- UpperCase = ['A', 'B', 'C', 'D', 'I', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
   LowerCase = ['a', 'b', 'c', 'd', 'i', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],

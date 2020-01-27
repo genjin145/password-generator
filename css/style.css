@@ -1,0 +1,20 @@
+@import "elements/button.css";
+@import "elements/checkbox.css";
+@import "elements/input.css";
+@import "elements/mark.css";
+
+@import "blocks/password-generator.css";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2D2D2D;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
