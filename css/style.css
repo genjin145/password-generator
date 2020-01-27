@@ -1,20 +1,120 @@
-@import "elements/button.css";
-@import "elements/checkbox.css";
-@import "elements/input.css";
-@import "elements/mark.css";
-
-@import "blocks/password-generator.css";
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 19px;
-  color: #2D2D2D;
-}
+  color: #2D2D2D; }
 
 main {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
+  box-sizing: border-box; }
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+.button-primary {
+  padding: 10px 33px;
+  color: #fff;
+  background-color: #415AB1;
+  border-radius: 10px;
+  transition: background-color 200ms; }
+
+.button-primary svg {
+  padding-right: 10px; }
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #0A154D; }
+
+.button-primary:active {
+  background-color: #060B25; }
+
+.custom-checkbox {
+  display: flex;
+  align-items: center; }
+
+.custom-checkbox__input {
+  display: none; }
+
+.custom-checkbox__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
   box-sizing: border-box;
-}
+  background-color: #F6EA66;
+  border: 1px solid #0A154D;
+  border-radius: 4px;
+  transition: border-color 200ms; }
+
+.custom-checkbox__box:hover,
+.custom-checkbox__box:focus {
+  border-color: #C32A20; }
+
+.custom-checkbox__input:checked ~ .custom-checkbox__box::before {
+  content: url(../../images/check_mark.svg);
+  margin-top: -3px; }
+
+.custom-checkbox__label .mark {
+  margin-left: 15px; }
+
+.input {
+  padding: 12px 15px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 200ms; }
+
+.input:hover,
+.input:focus {
+  border-color: #F88C28; }
+
+.mark {
+  display: inline-block;
+  padding: 2px 6px;
+  color: #333;
+  background-color: #CBD5F7;
+  border-radius: 4px; }
+
+.password-generator__box {
+  display: flex; }
+
+.password-generator__left,
+.password-generator__right {
+  width: 50%; }
+
+.password-generator__left {
+  padding-right: 45px; }
+
+.password-generator__right {
+  padding: 14px;
+  padding-left: 35px;
+  padding-right: 5px;
+  box-sizing: border-box;
+  border: 1px solid #C4C4C4;
+  border-radius: 10px; }
+
+.password-generator__left .custom-checkbox {
+  padding: 5px 0; }
+
+.password-generator__left-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px; }
+
+.password-generator__left-footer .input {
+  width: 100px; }
